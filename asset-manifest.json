@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Wordgic/static/css/main.3f85eebc.css",
+    "main.js": "/Wordgic/static/js/main.096c8a69.js",
+    "static/js/787.f586f862.chunk.js": "/Wordgic/static/js/787.f586f862.chunk.js",
+    "index.html": "/Wordgic/index.html",
+    "main.3f85eebc.css.map": "/Wordgic/static/css/main.3f85eebc.css.map",
+    "main.096c8a69.js.map": "/Wordgic/static/js/main.096c8a69.js.map",
+    "787.f586f862.chunk.js.map": "/Wordgic/static/js/787.f586f862.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f85eebc.css",
+    "static/js/main.096c8a69.js"
+  ]
+}
