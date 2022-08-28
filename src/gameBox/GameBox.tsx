@@ -104,10 +104,8 @@ export default function GameBox() {
     }
     for (let index = 0; index < 6; index++) {
       const pos = wordProbable.indexOf(text[index]);
-
-      if (pos !== -1 && wordProbable[pos] !== "0") {
+      if (pos !== -1 && wordProbable[pos] !== "0" && !posMap[index]) {
         wordProbable[pos] = "0";
-
         boardState[currIndex][index].color = GAME_COLOR.PROBABLE_POS;
       }
     }
