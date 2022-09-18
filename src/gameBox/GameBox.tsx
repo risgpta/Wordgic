@@ -91,7 +91,7 @@ export default function GameBox() {
     }
     const gameStateTemp = { ...gameState };
     const word = gameStateTemp.gameWord.split("");
-    const wordProbable = gameStateTemp.gameWord.split("");
+    const wordProbable = [];
     const boardState = gameStateTemp.boardState;
     const currIndex = gameStateTemp.currIndex;
     const posMap = Array(6).fill(false);
@@ -99,13 +99,13 @@ export default function GameBox() {
       if (word[index] === text[index]) {
         boardState[currIndex][index].color = GAME_COLOR.RIGHT_POS;
         posMap[index] = true;
-        wordProbable[index] = "0";
+      } else {
+        wordProbable.push(word[index]);
       }
     }
     for (let index = 0; index < 6; index++) {
-      const pos = wordProbable.indexOf(text[index]);
-      if (pos !== -1 && wordProbable[pos] !== "0" && !posMap[index]) {
-        wordProbable[pos] = "0";
+      if (!posMap[index] && wordProbable.includes(text[index])) {
+        wordProbable[index] = "0";
         boardState[currIndex][index].color = GAME_COLOR.PROBABLE_POS;
       }
     }

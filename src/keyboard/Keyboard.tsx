@@ -24,20 +24,20 @@ export default function Keyboard({
 }) {
   return (
     <div style={{ marginTop: "20px" }}>
-      {KEYS.map((row: any, index: number) =>
+      {KEYS.map((row: any, index: number) => (
         <div style={{ display: "flex", justifyContent: "center" }} key={index}>
-          {Object.keys(row).map((val: string, ind: number) =>
-            <div
+          {Object.keys(row).map((val: string, ind: number) => (
+            <button
               style={CELL_STYLE}
               key={ind}
               className="button"
               onClick={() => handleKeyBoardClick(row[val])}
             >
               {row[val]}
-            </div>
-          )}
+            </button>
+          ))}
         </div>
-      )}
+      ))}
     </div>
   );
 }
